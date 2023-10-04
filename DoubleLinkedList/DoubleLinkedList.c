@@ -144,13 +144,15 @@ struct DoubleLinkedListNode* getDoubleLinkedListNode(struct DoubleLinkedList* DL
         j = 0;
         while(j != i) {
             Node = Node->next;
+            j++;
         }
     }
     else {
         Node = DLL->tail;
         j = DLL->size - 1;
         while(j != i) {
-            Node = Node->next;
+            Node = Node->prev;
+            j--;
         }
     }
     return Node;
